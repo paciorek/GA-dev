@@ -15,12 +15,14 @@ jobs:
       with:
         python-version: 3.13
 
+    - name: Install dependencies
+      run: |
+        pip install pytest scikit-learn
     - name: Install GA
       run: |
-        # cd GA-dev
         pip install --user .
 
-    - name: Run tests
+    - name: Run tests and example assessments
       run: |
         cd GA/tests
         pytest
