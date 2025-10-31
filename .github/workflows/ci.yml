@@ -17,7 +17,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install pytest scikit-learn
+        pip install pytest pandas scikit-learn
     - name: Install GA
       run: |
         pip install --user .
