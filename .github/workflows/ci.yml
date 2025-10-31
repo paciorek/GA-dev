@@ -22,8 +22,12 @@ jobs:
       run: |
         pip install --user .
 
-    - name: Run tests and example assessments
+    - name: Run tests
       run: |
         cd GA/tests
         pytest
+        
+    - name: Assess performance 
+      run: |
+        cd GA/tests
         python assess.py
