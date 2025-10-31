@@ -12,7 +12,7 @@ readme = "README.md"
 
 requires-python = ">=3.10"
 dependencies = [
-    "tqdm",
+    "numpy",
 ]
 
 license = "BSD-3-Clause"
@@ -22,15 +22,11 @@ classifiers = [
     "Operating System :: OS Independent"
 ]
 
-keywords = ["tools", "toys"]
 dynamic = ["version"]
 
-[project.urls]
-Homepage = "https://github.com/fperez/mytoy"
-Issues = "https://github.com/fperez/mytoy/issues"
 
 [tool.setuptools]
-packages = ["mytoy"]
+packages = ["GA"]
 
 [tool.setuptools.dynamic]
-version = {attr = "mytoy.__version__"}
+version = {attr = "GA.__version__"}
