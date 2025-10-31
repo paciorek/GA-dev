@@ -12,7 +12,7 @@ readme = "README.md"
 
 requires-python = ">=3.10"
 dependencies = [
-    "numpy",
+    "numpy", "pytest
 ]
 
 license = "BSD-3-Clause"
