@@ -1,6 +1,7 @@
 from .setdata import X_diab, y_diab
 import pytest
 import GA
+import inspect
 
 def test_output():
     result1 = GA.select(X_diab, y_diab)
@@ -15,3 +16,7 @@ def test_bad_input():
         GA.select(y_diab, X_diab)
 
         
+def test_req_args():
+    sig = inspect.signature(GA.select)
+    assert "pop_size" in sig.parameters
+    assert "n_gen" in sig.parameters
