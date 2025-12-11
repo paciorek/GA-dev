@@ -1,6 +1,7 @@
 from setdata import X_diab, y_diab
 import GA
 import time
+import numpy as np
 
 ## Diabetes example
 
@@ -15,5 +16,6 @@ results = GA.select(X_diab, y_diab)
 fulltime = time.time() - t0
 
 print(f"Selected predictors {results['selected']}.")
+print(f"Number of predictors {np.sum(results['selected'])}.")
 print(f"CV R2: {results['R2']}.")
 print(f"Time taken: {fulltime}.")
