@@ -10,7 +10,7 @@ def test_output():
     assert 'selected' in result1.keys() and 'R2' in result1.keys() and 'R2pen' in result1.keys()
 
     # Check that can sum `selected` to get number of predictors selected.
-    assert isinstance(np.sum(result1.selected), (np.int64,np.int32,np.float64))
+    assert isinstance(np.sum(result1['selected']), (np.int64,np.int32,np.float64))
     
     result2 = GA.select(X_diab, y_diab, penalty=0.1)
     assert isinstance(result2, dict)
